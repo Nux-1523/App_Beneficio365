@@ -1,6 +1,6 @@
-# Beneficio365 – Aplicación Web para Donaciones de Alimentos  
+# Beneficio365 – Plataforma Web para Donación y Reutilización de Alimentos
 
-**Equipo de desarrollo:** Paola Vásquez - Módulo 
+**Equipo de desarrollo:** Paola Vásquez 
 **Módulo:** Bootcamp de Programación – IV DevOps
 **Fecha de inicio:** 19 de agosto de 2025  
 
