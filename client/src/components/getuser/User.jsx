@@ -25,9 +25,12 @@ export default function User() {
                 <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Name</th>
+                        <th scope="col">Nombre o Institucion</th>
                         <th scope="col">Email</th>
-                        <th scope="col">Address</th>
+                        <th scope="col">Telefono</th>
+                        <th scope="col">Tipo Usuario</th>
+                        <th scope="col">Direccion</th>
+                        <th scope="col">Fecha Registro</th>
                         <th scope="col">Actions</th>
                     </tr>
                 </thead>
@@ -36,9 +39,12 @@ export default function User() {
                         return (
                             <tr>
                                 <th scope="row">{index + 1}</th>
-                                <td>{user.name}</td>
+                                <td>{user.nombre_institucion}</td>
                                 <td>{user.email}</td>
-                                <td>{user.address}</td>
+                                <td>{user.telefono}</td>
+                                <td>{user.tipoUsuario}</td>
+                                <td>{user.direccion}</td>
+                                <td>{user.fecha_registro}</td>
                                 <td className="actionsButtons">
                                     <button type="button" className="btn btn-info">
                                         <i className="fa-solid fa-pen-to-square"></i>

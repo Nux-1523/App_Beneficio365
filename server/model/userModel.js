@@ -3,35 +3,43 @@ const userSchema = new mongoose.Schema (
     {
         nombre_institucion: {
             type: String, 
-            required: true
+            required: true,
+            trim:true
         },
         email: {
             type: String, 
-            unique: true
+            unique: true,
+            trim:true,
+            lowercase:true
         },
-        direccion: {
-            type: String, 
-        },
-        telefono: {
-            type: String, 
+         telefono: {
+            type: String,
+             trim:true  
         },
         tipoUsuario: {
             type: String, 
-            require: true
+            require: true,
+            trim:true
         },
-        fechaRegistro: {
+        direccion: {
+            type: String,
+            trim:true 
+        },
+             
+        fecha_registro: {
             type: Date, 
             default: Date.now
-        },
-        productos_publicados: {
-            type: Array, 
-            default:[]
-        },
-        solicitudes: {
-            type: Array, 
-            default:[]
         }
+        //productos_publicados: {
+          //  type: Array, 
+          //  default:[]
+       // },
+        //solicitudes: {
+         //   type: Array, 
+         //  default:[]}
+    },
+     {
+    timestamps: true // opcional: agrega createdAt y updatedAt
+});
 
-    }
-)
-export default mongoose.model("Users",userSchema);
+export default mongoose.model("Users",userSchema); 

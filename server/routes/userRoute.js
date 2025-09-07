@@ -12,12 +12,12 @@ route.post("/users", create);
 route.get("/users", getAllUsers);
 // Obtener un usuario por ID
 // GET http://localhost:8000/api/users/:id
-route.get("/user/:id", getUserById);
+route.get("/users/:id", getUserById);
 // Actualizar un usuario por ID
 // PUT http://localhost:8000/api/users/:id
-route.put("/update/user/:id", updateUser);
+route.put("/update/users/:id", updateUser);
 // Eliminar un usuario por ID
 // DELETE http://localhost:8000/api/users/:id
-route.delete("/delete/user/:id", deleteUser);
+route.delete("/delete/users/:id", deleteUser);
 
 export default route;
