@@ -1,0 +1,73 @@
+/* Contenedor principal */
+.userListContainer {
+  padding: 2rem;
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9; /* Fondo suave */
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Encabezado del listado */
+.userListHeader {
+  margin-bottom: 1.5rem;
+  text-align: right;
+}
+
+/* Botón verde para ir a User.jsx */
+.btnGoToUser {
+  background-color: #28a745; /* Verde principal */
+  color: white;
+  padding: 0.6rem 1.2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btnGoToUser:hover {
+  background-color: #218838; /* Verde más oscuro al hover */
+  transform: translateY(-2px);
+}
+
+/* Tabla de usuarios */
+.userListTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Encabezados y celdas */
+.userListTable th,
+.userListTable td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+}
+
+.userListTable th {
+  background-color: #28a745; /* Verde suave para headers */
+  color: white;
+  text-align: left;
+}
+
+.userListTable td {
+  background-color: #ffffff; /* Fondo blanco para filas */
+  color: #333;
+}
+
+/* Efecto hover en filas */
+.userListTable tbody tr:hover {
+  background-color: #f1fdf5; /* Verde muy suave al pasar el mouse */
+}
+
+/* Mensaje cuando no hay usuarios */
+.noUsers {
+  text-align: center;
+  font-style: italic;
+  color: #888;
+  padding: 1rem 0;
+}

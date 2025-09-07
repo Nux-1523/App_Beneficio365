@@ -35,8 +35,16 @@ export default function User() {
 
 
     return (
-        <div className="userTable">
-            <Link to="/add" type="button" className="btn btn-primary">Add user <i className="fa-solid fa-user-plus"></i></Link>
+     <div className="userTableContainer">
+      {/* Botones encima de la tabla */}
+      <div className="userTableHeader">
+        <Link to="/add" className="btn btn-primary">
+          Añadir usuario <i className="fa-solid fa-user-plus"></i>
+        </Link>
+        <Link to="/" className="btn btn-secondary">
+          Regresar <i className="fa-solid fa-arrow-left"></i>
+        </Link>
+      </div>
             <table className="table table-bordered">
                 <thead>
                     <tr>
@@ -47,7 +55,7 @@ export default function User() {
                         <th scope="col">Tipo Usuario</th>
                         <th scope="col">Direccion</th>
                         <th scope="col">Fecha Registro</th>
-                        <th scope="col">Actions</th>
+                        <th scope="col">Acciones</th>
                     </tr>
                 </thead>
                 <tbody>

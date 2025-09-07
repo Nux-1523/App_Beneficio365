@@ -1,117 +1,102 @@
-/* user.css */
-
-/* Fondo general */
-body {
-  margin: 0;
-  padding: 0;
-  background: #f4f6f9;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+/* Contenedor principal */
+.userTableContainer {
+  padding: 2rem;
+  max-width: 1000px;
+    margin: 0 auto;
+  font-family: Arial, sans-serif;
 }
 
-/* Contenedor de la tabla */
-.userTable {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 14px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 0.7s ease-in-out;
-}
-
-/* Botón de añadir usuario */
-.userTable .btn-primary {
-  margin-bottom: 20px;
-  display: inline-flex;
+/* Contenedor de botones */
+.userTableHeader {
+  display: flex;
+  justify-content: space-between; /* Botón izquierda y derecha */
+  width: 100%;
+  margin-bottom: 1rem;
   align-items: center;
-  gap: 8px;
-  border-radius: 8px;
-  font-weight: 600;
-  padding: 10px 16px;
+}
+
+/* Botones */
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+  transform: translateY(-2px);
 }
 
 /* Tabla */
-.userTable table {
+
+.userListTable {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.95rem;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-/* Encabezado */
-.userTable thead {
-  background: #2575fc;
-  color: #fff;
-  text-align: left;
-}
-
-.userTable thead th {
-  padding: 14px 12px;
-  font-weight: 600;
+  margin-top: 1rem;
   font-size: 0.95rem;
 }
 
-/* Filas */
-.userTable tbody tr {
-  border-bottom: 1px solid #e0e0e0;
-  transition: background 0.3s;
+.userListTable th,
+.userListTable td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
 }
 
-.userTable tbody tr:nth-child(even) {
-  background: #f9fbff;
-}
-
-.userTable tbody tr:hover {
-  background: #eef4ff;
-}
-
-/* Celdas */
-.userTable td,
-.userTable th {
-  padding: 12px 14px;
+.userListTable th {
+  background-color: #28a745;
+  color: white;
   text-align: left;
 }
 
-/* Columna acciones */
-.actionsButtons {
-  display: flex;
-  gap: 10px;
+.userListTable td {
+  background-color: #ffffff;
+  color: #333;
 }
 
-/* Botones de acciones */
-.actionsButtons .btn {
-  border-radius: 8px;
-  padding: 8px 12px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.2s, opacity 0.3s;
+.userListTable tbody tr:hover {
+  background-color: #f1fdf5;
 }
 
-.actionsButtons .btn:hover {
-  transform: translateY(-2px);
-  opacity: 0.9;
+/* Mensaje si no hay usuarios */
+.noUsers {
+  text-align: center;
+  font-style: italic;
+  color: #888;
+  padding: 1rem 0;
 }
 
-/* Animación suave */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-15px); }
-  to   { opacity: 1; transform: translateY(0); }
+/* Botones de acciones dentro de la tabla */
+.actionsButtons .btn-info {
+  background-color: #17a2b8;
+  color: white;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .userTable {
-    padding: 12px;
-  }
+.actionsButtons .btn-info:hover {
+  background-color: #138496;
+}
 
-  .userTable table {
-    font-size: 0.85rem;
-  }
+.actionsButtons .btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
 
-  .actionsButtons {
-    flex-direction: column;
-    gap: 6px;
-  }
+.actionsButtons .btn-danger:hover {
+  background-color: #c82333;
 }

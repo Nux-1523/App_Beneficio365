@@ -3,6 +3,7 @@ import User from './components/getuser/User';
 import AddUser from './components/adduser/AddUser';
 import UpdateUser from './components/updateuser/UpdateUser';
 import Landing from './components/pages/Landing';
+import UserList from './components/getuser/UserList';
 import {RouterProvider, createBrowserRouter} from 'react-router-dom'
 
 // Permitira manejar los errores
@@ -50,8 +51,13 @@ function NotFound() {
       errorElement: <ErrorPage />
     },
     {
+      path: "/userlist",
+      element: <UserList />,
+      errorElement: <ErrorPage />
+    },
+    {
     path: "*",
-    element: <NotFound />   // ✅ Aquí sí se usa NotFound
+    element: <NotFound />   // Se usa NotFound
     }
   ])
 
