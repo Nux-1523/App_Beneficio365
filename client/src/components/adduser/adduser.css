@@ -1,24 +1,117 @@
+/* adduser.css */
+
+/* Variables y base */
+:root {
+  --bg1: #6a11cb;
+  --bg2: #2575fc;
+  --radius: 16px;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, var(--bg1), var(--bg2));
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Card del formulario */
 .addUser {
-    width: 60%;
-    margin: 50px auto;
-    background-color: #eef0f6;
-    padding: 50px;
-    border-radius: 10px;
-    box-shadow: 1px 1px 8px rgb(0, 0, 0, 0.065);
+  width: 100%;
+  max-width: 600px;
+  margin: 20px;
+  padding: 30px 35px;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.7s ease-in-out;
 }
 
+/* Título */
 .addUser h3 {
-    text-align: left;
-    font-family: Arial Black;
-    font-weight: bold;
-    font-size: 30px;
-    color: #094d74;
-    text-transform: uppercase;
-    text-shadow: 0 1px 0 #759cd8, 0 2px 0 #759cd8, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
-    text-align: center;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #333;
 }
 
-.addUser .submit{
-    margin: 5px;
-    width: -webkit-fill-available;
+/* Botón de volver */
+.addUser .btn-secondary {
+  margin-bottom: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 8px;
+  padding: 8px 14px;
+}
+
+/* Formulario */
+.addUser form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.addUser .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.addUser label {
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #444;
+}
+
+.addUser .form-control {
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.addUser .form-control:focus {
+  border-color: #2575fc;
+  box-shadow: 0 0 6px rgba(37, 117, 252, 0.5);
+}
+
+/* Botón Submit (sobrescribe bootstrap) */
+.addUser .btn.submit {
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, var(--bg1), var(--bg2));
+  border: none;
+  color: #fff;
+  transition: transform 0.2s, opacity 0.3s;
+}
+
+.addUser .btn.submit:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-15px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .addUser { margin: 12px; padding: 20px; }
+  .addUser .form-control { font-size: 16px; }
+  .addUser .btn.submit, .addUser .btn-secondary { width: 100%; }
 }

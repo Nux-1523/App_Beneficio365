@@ -1,28 +1,117 @@
+/* user.css */
+
+/* Fondo general */
+body {
+  margin: 0;
+  padding: 0;
+  background: #f4f6f9;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Contenedor de la tabla */
 .userTable {
-    color: red;
-    width: 60%;
-    margin: 50px auto;
-    background-color: #eef0f6;
-    padding: 50px;
-    border-radius: 10px;
-    box-shadow: 1px 1px 8px rgb(0, 0, 0, 0.065);
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.7s ease-in-out;
 }
 
-.userTable table{
-    width: 100%;
-    margin-top: 30px;
+/* Botón de añadir usuario */
+.userTable .btn-primary {
+  margin-bottom: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 10px 16px;
 }
 
-.userTable table thead th {
-    background-color: #094d74;
-    color: white;
+/* Tabla */
+.userTable table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-.userTable table tbody td {
-    padding: 10px;
-    text-align: center;
-    vertical-align: middle;
+/* Encabezado */
+.userTable thead {
+  background: #2575fc;
+  color: #fff;
+  text-align: left;
 }
-.actionButtons button {
-    margin: 0 10px;
+
+.userTable thead th {
+  padding: 14px 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Filas */
+.userTable tbody tr {
+  border-bottom: 1px solid #e0e0e0;
+  transition: background 0.3s;
+}
+
+.userTable tbody tr:nth-child(even) {
+  background: #f9fbff;
+}
+
+.userTable tbody tr:hover {
+  background: #eef4ff;
+}
+
+/* Celdas */
+.userTable td,
+.userTable th {
+  padding: 12px 14px;
+  text-align: left;
+}
+
+/* Columna acciones */
+.actionsButtons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Botones de acciones */
+.actionsButtons .btn {
+  border-radius: 8px;
+  padding: 8px 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, opacity 0.3s;
+}
+
+.actionsButtons .btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Animación suave */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-15px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .userTable {
+    padding: 12px;
+  }
+
+  .userTable table {
+    font-size: 0.85rem;
+  }
+
+  .actionsButtons {
+    flex-direction: column;
+    gap: 6px;
+  }
 }

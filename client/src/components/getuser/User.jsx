@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './user.css'
 import axios from "axios"
 import { Link } from 'react-router-dom'
+import toast from 'react-hot-toast'
 
 export default function User() {
     const [users, setUsers] = useState([])
@@ -16,6 +17,21 @@ export default function User() {
         };
         fetchData();
     }, []);
+
+    const deleteUser = async (userId) => {
+        await axios
+            .delete(`http://localhost:8000/api/delete/users/${userId}`)
+            .then ((response) => {
+                setUsers((prevUser) => prevUser.filter((user) => user._id !==userId));
+                toast.success(response.data.message || "Usuario eliminado", {
+               position: "top-right",
+               });
+    })
+            .catch ((error) =>{
+                console.log(error);
+                toast.error("Error al eliminar el usuario", {position: "top-right"});
+            });
+    };
 
 
     return (
@@ -46,13 +62,17 @@ export default function User() {
                                 <td>{user.direccion}</td>
                                 <td>{user.fecha_registro}</td>
                                 <td className="actionsButtons">
-                                    <button type="button" className="btn btn-info">
+                                    <Link to={`/update/${user._id}`} className="btn btn-info">
                                         <i className="fa-solid fa-pen-to-square"></i>
-                                    </button>
-                                    <button type="button" className="btn btn-danger">
+                                    </Link> 
+                                    <button
+                                        onClick={() => deleteUser(user._id)}
+                                        type="button"
+                                        className="btn btn-danger ms-2">
                                         <i className="fa-solid fa-trash"></i>
                                     </button>
-                                </td>
+                                    
+                                      </td>
                             </tr>
                         )
                     })}

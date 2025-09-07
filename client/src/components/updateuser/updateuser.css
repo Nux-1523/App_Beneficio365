@@ -1,0 +1,71 @@
+.updateUser {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 25px 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.updateUser h3 {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.updateUser .btn-secondary {
+  margin-bottom: 20px;
+  background: #6c757d;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.updateUser .btn-secondary:hover {
+  background: #5a6268;
+}
+
+.updateUser .form-group {
+  margin-bottom: 18px;
+}
+
+.updateUser label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+  color: #444;
+}
+
+.updateUser .form-control {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.updateUser .form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.2);
+}
+
+.updateUser .btn-primary.submit {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  background: #007bff;
+  border: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.updateUser .btn-primary.submit:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}
