@@ -1,4 +1,4 @@
-# Beneficio365 – Aplicación Web para Donaciones de Alimentos  
+# 365BieneficiO – Aplicación Web para Donaciones de Alimentos  
 
 **Equipo de desarrollo:** Alexandra Paola Vásquez 
 **Módulo:** Bootcamp de Programación – IV DevOps
