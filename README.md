@@ -8,7 +8,7 @@
 
 ## 📌 Descripción General  
 
-364BieneficiO es una **aplicación web** diseñada para reducir el desperdicio de alimentos mediante un espacio digital donde **donantes** (restaurantes, supermercados, familias) pueden publicar productos aptos para consumo y **beneficiarios** (organizaciones) que se encuentren en la necesidad de solicitarlos.  
+365BieneficiO es una **aplicación web** diseñada para reducir el desperdicio de alimentos mediante un espacio digital donde **donantes** (restaurantes, supermercados, familias) pueden publicar productos aptos para consumo y **beneficiarios** (organizaciones) que se encuentren en la necesidad de solicitarlos.  
 
 La plataforma promueve la **solidaridad comunitaria** y la **conciencia ambiental**, conectando a quienes tienen excedentes con quienes más lo necesitan.  
 
