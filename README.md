@@ -2,7 +2,7 @@
 
 **Equipo de desarrollo:** Alexandra Paola Vásquez 
 **Módulo:** Bootcamp de Programación – IV DevOps
-**Fecha de inicio:** 19 de agosto de 2025  
+ 
 
 ---
 
