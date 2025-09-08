@@ -1,6 +1,6 @@
 # Beneficio365 – Aplicación Web para Donaciones de Alimentos  
 
-**Equipo de desarrollo:** Paola Vásquez - Módulo 
+**Equipo de desarrollo:** Alexandra Paola Vásquez 
 **Módulo:** Bootcamp de Programación – IV DevOps
 **Fecha de inicio:** 19 de agosto de 2025  
 
@@ -8,7 +8,7 @@
 
 ## 📌 Descripción General  
 
-Beneficio365 es una **aplicación web** diseñada para reducir el desperdicio de alimentos mediante un espacio digital donde **donantes** (restaurantes, supermercados, familias) pueden publicar productos aptos para consumo y **beneficiarios** (familias o instituciones) puedan solicitarlos.  
+364BieneficiO es una **aplicación web** diseñada para reducir el desperdicio de alimentos mediante un espacio digital donde **donantes** (restaurantes, supermercados, familias) pueden publicar productos aptos para consumo y **beneficiarios** (organizaciones) que se encuentren en la necesidad de solicitarlos.  
 
 La plataforma promueve la **solidaridad comunitaria** y la **conciencia ambiental**, conectando a quienes tienen excedentes con quienes más lo necesitan.  
 
@@ -17,12 +17,11 @@ La plataforma promueve la **solidaridad comunitaria** y la **conciencia ambienta
 ## 🛠️ Tecnologías Utilizadas  
 
 - **Frontend:** React  
-- **Backend:** Node.js (con Express)  
-- **Base de datos:** MongoDB Atlas  
-- **Autenticación:** JWT u otro sistema de validación segura  
+- **Backend:** Node.js - Express
+- **Base de datos:** MongoDB Compass 
 - **Entorno de desarrollo:** Visual Studio Code  
-- **Control de versiones:** GitHub  
-- **Servicios adicionales:** Firebase, API externas, servicio de correo/notificaciones  
+- **Control de versiones:** GitHub
+- **Testeo de Colecciones**: Postman 
 
 ---
 
@@ -31,7 +30,7 @@ La plataforma promueve la **solidaridad comunitaria** y la **conciencia ambienta
 1. **Clonar el repositorio**  
    ```bash
    git clone <URL-del-repositorio>
-   cd beneficio365
+   cd 365BieneficiO
    ```  
 
 2. **Instalar dependencias**  
@@ -48,9 +47,8 @@ La plataforma promueve la **solidaridad comunitaria** y la **conciencia ambienta
 
 3. **Configurar variables de entorno (.env)**  
    ```env
-   DB_URI=<cadena-conexion-MySQL/PostgreSQL>
-   PORT=5000
-   JWT_SECRET=<clave-secreta>
+PORT = 8000
+MONGO URL = "mongodb://localhost:27017/Beneficio365"
    ```  
 
 4. **Ejecutar la aplicación**  
@@ -69,9 +67,9 @@ La plataforma promueve la **solidaridad comunitaria** y la **conciencia ambienta
 
 El despliegue seguirá un modelo **frontend-backend desacoplado**:  
 
-- **Frontend:** Se construirá con `npm run build` y será desplegado como aplicación estática en plataformas como **Vercel** o **Netlify**.  
-- **Backend:** Se implementará como servicio web en **Render** o **Railway**, configurando las variables de entorno y conexión a la base de datos.  
-- **Base de datos:** Se utilizará un servicio gestionado en la nube (ej. Railway, Supabase o ElephantSQL para PostgreSQL).  
+- **Frontend:** Se construirá con `npm run build` y será desplegado como aplicación estática en plataformas como **Render**. 
+- **Backend:** Se implementará como servicio web en **Render**, configurando las variables de entorno y conexión a la base de datos.  
+- **Base de datos:** Se utilizará un servicio de **MongoDB Compass**.  
 
 🔗 El enlace a la aplicación se compartirá al finalizar el despliegue.  
 
@@ -81,9 +79,7 @@ El despliegue seguirá un modelo **frontend-backend desacoplado**:
 
 ### Sprint 1 – Diseño y Base de la Aplicación  
 - Configuración de arquitectura (React + Node.js).  
-- Integración inicial con base de datos.  
-- Sistema de registro y login con autenticación JWT.  
-- UI/UX básica para registro e inicio de sesión.  
+- Integración inicial con base de datos. 
 
 ### Sprint 2 – Gestión de Donaciones y Funcionalidad Básica  
 - CRUD de donaciones (crear, editar, eliminar).  
@@ -100,18 +96,8 @@ El despliegue seguirá un modelo **frontend-backend desacoplado**:
 
 ---
 
-## 🧩 Funcionalidades Clave (MVP)  
-
-- Registro y autenticación de usuarios (donantes/beneficiarios).  
-- Publicación de alimentos con información esencial.  
-- Listado en tiempo real de donaciones disponibles.  
-- Solicitud y confirmación básica de donaciones.  
-
----
-
 ## ⚡ Desafíos y Soluciones  
 
-- **Gestión de autenticación segura:** Se solucionará con JWT y validaciones en backend.  
 - **Sin presupuesto fijo:** Uso de herramientas gratuitas (VS Code, GitHub, Firebase, Render).  
 - **Tiempo limitado (bootcamp):** Se priorizará un **MVP funcional** sobre características avanzadas.  
 
@@ -119,7 +105,7 @@ El despliegue seguirá un modelo **frontend-backend desacoplado**:
 
 ## ✅ Conclusión  
 
-Beneficio365 se plantea como una **solución tecnológica de impacto social**, enfocada en:  
+B365BieneficiO se plantea como una **solución tecnológica de impacto social**, enfocada en:  
 - **Reducir el desperdicio de alimentos.**  
 - **Promover la solidaridad en la comunidad.**  
 - **Garantizar seguridad, transparencia y accesibilidad.**  
